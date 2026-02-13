@@ -14,11 +14,11 @@ spec:
       labels:
         app: project-c
     spec:
+      imagePullSecrets:
+        - name: regcred
       containers:
         - name: project-c
           image: jiya1/jiya:latest
-          imagePullSecrets:
-          - name: regcred
           ports:
             - containerPort: 3000
           resources:
