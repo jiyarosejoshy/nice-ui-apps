@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: project-c
+  labels:
+    app: project-c
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: project-c
+  template:
+    metadata:
+      labels:
+        app: project-c
+    spec:
+      containers:
+        - name: project-c
+          image: jiya1/jiya:latest
+          ports:
+            - containerPort: 3000
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "250m"
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
+
