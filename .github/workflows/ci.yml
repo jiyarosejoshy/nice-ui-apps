@@ -25,3 +25,8 @@ jobs:
     - name: Push image
       run: docker push ${{ secrets.DOCKER_USERNAME }}/jiya:${{ github.sha }}
 
+    - name: Update deployment image
+      run: |
+        sed -i "s|image: .*|image: ${{ secrets.DOCKER_USERNAME }}/jiya:${{ github.sha }}|g" k8s/deployment.yaml
+
+
