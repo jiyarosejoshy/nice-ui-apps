@@ -32,7 +32,7 @@ const Index = () => {
               <CheckSquare className="h-5 w-5 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-foreground tracking-tight">Tasksssss....</h1>
+              <h1 className="text-2xl font-bold text-foreground tracking-tight">Tasks</h1>
               <p className="text-sm text-muted-foreground">
                 {counts.done} of {counts.all} completed
               </p>
