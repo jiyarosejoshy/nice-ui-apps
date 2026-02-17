@@ -28,6 +28,8 @@ jobs:
     - name: Update deployment image
       run: |
         sed -i "s|image: .*|image: ${{ secrets.DOCKER_USERNAME }}/jiya:${{ github.sha }}|g" k8s/deployment.yaml
+        git config --global user.email "jiyarosejoshy2004@gmail.com"
+        git config --global user.name "Jiya Rose Joshy"
         git add k8s/deployment.yaml
         git commit -m ${{ github.sha }}
         git push
