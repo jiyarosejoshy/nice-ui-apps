@@ -18,7 +18,7 @@ spec:
         - name: regcred
       containers:
         - name: project-c
-          image: jiya1/jiya:latest
+          image: jiya1/jiya:f8dd3eed171cdb6e7010e0f78c8b3489d93a38d4
           ports:
             - containerPort: 3000
           resources:
